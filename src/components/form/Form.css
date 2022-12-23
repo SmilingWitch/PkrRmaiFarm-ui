@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+ 
+ :root {
+     --bgColor : black ;
+     --fontColor : rgb(255, 153, 0) ; 
+ }
+
+*{
+
+    box-sizing: border-box ;
+    font-family: 'Poppins', sans-serif;
+}
+.screen {
+    position: absolute ;
+    z-index: 100 ;
+    background: var(--bgColor) ;
+    width: 100% ;
+    min-height: 100vh ;
+    
+}
+.info {
+    position: relative ;
+    width: 100% ;
+    height: 80px ;  
+}
+.brand{
+    display: flex ;
+    width: 400px ;
+    justify-content: center;
+    align-items: center ;
+    top: 5px;
+}
+.img {
+    position: relative;
+    width: 70px ;
+    height: 70px ;
+    background-image: url(LogoMain.png);
+    background-size: cover ;
+    margin-right: 10px ;
+
+}
+.pokeroi {
+    color: whitesmoke;
+    text-transform: uppercase;
+}
+
+.Bx {
+    position: relative ;
+    display: grid ;
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr ));
+    top: 60px;
+}
+.Bx1 {
+    position: relative ;
+    
+}
+.Bx2 {
+    position: relative ;
+
+}
+.header {
+    width: 100% ;
+    min-height: 20px ;
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    margin-bottom: 25px;
+}
+h2{
+    color: var(--fontColor);
+    position: relative;
+    font-size: 1.5em ;
+   
+}
+.submit {
+    position: relative ;
+    width: 100% ;
+    display: grid ;
+    align-items: center ;
+    justify-content: center ;
+}
+.criptoBX {
+    position: relative ;
+    width: 100% ;
+    min-height: 50px;
+    display: flex ;
+    align-items: center ;
+    justify-content: center; 
+}
+.Container {
+    position: relative ;
+    border-radius: 20px;
+    width: 400px ;
+    height: 250px ;
+    overflow: hidden;
+    background: black ;
+    border: 1px solid rgba(138, 134, 134, 0.7);
+    border-left: 1px solid  rgba(138, 134, 134, 0.7);
+}
+
+.inputBx {
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+}
+.span{
+    position: relative ;
+    width: 100% ;
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+}
+.span span {
+    color: whitesmoke;
+    font-size: 1.2em ;
+    font-weight: 60px;
+}
+
+
+.inputBx input {
+    position: relative ; 
+    border-radius: 10px ;
+    border: none ;
+    border-bottom: 1px solid rgba(138, 134, 134, 0.7);
+    background: transparent ;
+    width: 75% ;
+    height: 35px;
+    padding-top:10px 0 ;
+    outline: none ;
+    font-size: 15px;
+    font-weight: 300 ;
+    resize: none ;
+    color: whitesmoke ;
+
+}
+.inputBx input::placeholder {
+    color: rgba(255, 255, 255,0.5);
+}
+
+.PKR {
+    position: relative ;
+    background:transparent;
+    width: 100%;
+    height: 50%;
+}
+.RMAI {
+    position: relative ;
+    background:transparent ;
+    width: 100%;
+    height: 50%;
+}
+
+.submit input
+{
+    position: relative;
+    background: var(--fontColor);
+    color: var(--bgColor) ;
+    max-width: 150px ;
+    padding: 8px;
+    text-transform: uppercase ;
+    letter-spacing: 2px ;
+    font-weight: 500;
+    border-radius: 10px;
+}
+.buttom {
+    position: relative;
+    width: 100%;
+    margin-top: 70px;
+    display: flex ;
+    align-items: center ;
+    justify-content: center;
+    
+}
+.stats{
+    position: relative;
+    width: 100% ;
+    min-height: 100px ;
+    display: flex ;
+    align-items: center ;
+    justify-content: center;
+    margin-top: 20px;
+}
+.statsBx {
+    position: relative;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr ));
+    grid-gap: 10px;
+}
+.stat{
+    color: var(--fontColor);
+    min-width: 100px ;
+    min-height: 100px ;
+}
+.number {
+    font-size: 2.5em;
+}

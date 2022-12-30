@@ -48,6 +48,59 @@ function Form() {
                     <span style = {{"--i":21}}></span>
                     <span style = {{"--i":11}}></span>
                     <span style = {{"--i":5}}></span>
+                    <span style = {{"--i":11}}></span>
+                    <span style = {{"--i":8}}></span>
+                    <span style = {{"--i":5}}></span>
+                    <span style = {{"--i":25}}></span>
+                    <span style = {{"--i":14}}></span>
+                    <span style = {{"--i":2}}></span>
+                    <span style = {{"--i":6}}></span>
+                    <span style = {{"--i":21}}></span>
+                    <span style = {{"--i":11}}></span>
+                    <span style = {{"--i":5}}></span>
+                    <span style = {{"--i":5}}></span>
+                    <span style = {{"--i":11}}></span>
+                    <span style = {{"--i":8}}></span>
+                    <span style = {{"--i":5}}></span>
+                    <span style = {{"--i":25}}></span>
+                    <span style = {{"--i":14}}></span>
+                    <span style = {{"--i":2}}></span>
+                    <span style = {{"--i":6}}></span>
+                    <span style = {{"--i":21}}></span>
+                    <span style = {{"--i":11}}></span>
+                    <span style = {{"--i":5}}></span>
+                    <span style = {{"--i":20}}></span>
+                    <span style = {{"--i":15}}></span>
+                    <span style = {{"--i":11}}></span>
+                    <span style = {{"--i":8}}></span>
+                    <span style = {{"--i":5}}></span>
+                    <span style = {{"--i":25}}></span>
+                    <span style = {{"--i":14}}></span>
+                    <span style = {{"--i":2}}></span>
+                    <span style = {{"--i":6}}></span>
+                    <span style = {{"--i":21}}></span>
+                    <span style = {{"--i":11}}></span>
+                    <span style = {{"--i":5}}></span>
+                    <span style = {{"--i":11}}></span>
+                    <span style = {{"--i":8}}></span>
+                    <span style = {{"--i":5}}></span>
+                    <span style = {{"--i":25}}></span>
+                    <span style = {{"--i":14}}></span>
+                    <span style = {{"--i":2}}></span>
+                    <span style = {{"--i":6}}></span>
+                    <span style = {{"--i":21}}></span>
+                    <span style = {{"--i":11}}></span>
+                    <span style = {{"--i":5}}></span>
+                    <span style = {{"--i":5}}></span>
+                    <span style = {{"--i":11}}></span>
+                    <span style = {{"--i":8}}></span>
+                    <span style = {{"--i":5}}></span>
+                    <span style = {{"--i":25}}></span>
+                    <span style = {{"--i":14}}></span>
+                    <span style = {{"--i":2}}></span>
+                    <span style = {{"--i":6}}></span>
+                    <span style = {{"--i":21}}></span>
+                
                 </div>
                 
            <div className = "screen">
@@ -60,10 +113,10 @@ function Form() {
             </div>
             <div className = "Bx">
                 <div className = "Bx1">
-                    <div>
+                    <div className = "header">
                         <h1>
-                        <span> Provide liquidity or stake </span> <br />
-                        in PKR and RMAI to earn MATIC
+                         Provide liquidity or stake <br />
+                        in <span>PKR</span>  and  <span>RMAI</span>  to earn <span className = "matic">MATIC</span>
                         
                         </h1>
                     </div>
@@ -125,6 +178,9 @@ function Form() {
 
        </div>
         
+    </div>
+    <div>
+
     </div>
 
 

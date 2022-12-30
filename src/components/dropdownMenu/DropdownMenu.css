@@ -55,3 +55,26 @@
 .dropdown:hover .icDown {
     color: var(--fontColor);
 }
+@media (max-width : 500px) {
+    .dropdown .dropdown-btn {
+        padding: 15px 20px ;
+        background: transparent;
+        cursor: pointer ;
+        box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+        font-weight: bold ;
+        font-size: 1em; 
+        color: var(--fontColor);
+        display: flex ;
+        align-items: center ;
+        justify-content: space-between ;
+        
+    }
+    .dropdown .dropdown-content .dropdown-item {
+        padding: 10px ;
+        cursor: pointer ;
+        font-size: 0.8em;
+        transition: all 0.2s ;
+
+    }
+
+}

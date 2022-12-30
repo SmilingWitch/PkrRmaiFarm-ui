@@ -52,7 +52,7 @@
 .Bx {
     position: relative ;
     display: grid ;
-    grid-template-columns: repeat(auto-fit, minmax(400px,1fr ));
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr ));
     top: 60px;
 }
 .Bx1 {
@@ -61,12 +61,27 @@
     align-items: center ;
     justify-content: center;  
 }
+.Bx1 .header {
+    width: 300px;
+}
 .Bx1 h1 {
     color: var(--otherColor);
+    text-align: center ;   
+}
+.Bx1 h1 span {
+    color: var(--turquesa);
+    text-shadow:1px 1px 1px black,
+    1px 1px  0.1em var(--turquesa)
+    
+}
+.Bx1 h1 .matic {
+    color: var(--fontColor);
+    text-shadow:1px 1px 1px black,
+    1px 1px  0.1em var(--fontColor)
+    
 }
 .Bx2 {
     position: relative ;
-
 }
 .header {
     width: 100% ;
@@ -88,6 +103,7 @@ h2{
     display: grid ;
     align-items: center ;
     justify-content: center ;
+   
 }
 .criptoBX {
     position: relative ;
@@ -96,19 +112,24 @@ h2{
     display: flex ;
     align-items: center ;
     justify-content: center; 
-    
 }
+
 .Container {
     position: relative ;
     border-radius: 20px;
     width: 400px ;
     min-height: 250px ;
-    overflow: hidden;
-    background: var(--bgColor);
-    border: 1px solid var(--rgbaColor);
-    border-left: 1px solid  var(--rgbaColor);
+    border: 1px solid var(--turquesa);
+    border-left: 1px solid  var(--turquesa);
+    background: #070d18;
+    box-shadow: 0 0 0 5px var(--cumplimentColor) ,
+    0 0 0px var(--cumplimentColor) ,
+    0 0 0px var(--cumplimentColor);
+    top: 30px;
     
 }
+
+ 
 .selectContainer {
     display: flex ;
     align-items: center ;
@@ -125,7 +146,7 @@ h2{
     width: 100% ;
     padding: 10px ;
     border: 1px solid rgba(255,255,255,0.25);
-    background: var(--bgColor);
+    background: #09111f;
     border-radius: 5px ;
     color: #fff ;
     font-size: 1em ;
@@ -142,18 +163,19 @@ h2{
 }
 .inputBx input:valid ~ span,
 .inputBx input:focus ~ span {
-    color: var(--fontColor);
+    color: var(--turquesa);
     transform: translateX(10px) translateY(-7px);
     font-size: 0.65em ;
     padding: 0 10px ;
     background: black;
-    border-left: 1px solid var(--fontColor);
-    border-right: 1px solid var(--fontColor);
+    border-left: 1px solid var(--cumplimentColor);
+    border-right: 1px solid var(--cumplimentColor);
     letter-spacing: 0.2em ;
+    background: #09111f;
 }
 .inputBx input:valid,
 .inputBx input:focus {
-    border: 2px solid var(--fontColor) ;
+    border: 2px solid var(--cumplimentColor) ;
 }
 
 .RMAI, .PKR {
@@ -167,16 +189,19 @@ h2{
 {
     position: relative;
     background: var(--fontColor);
-    color: var(--otherColor) ;
-    max-width: 150px ;
-    padding: 8px;
-    text-transform: uppercase ;
+    color: #09111f ;
+    width: 150px ;
+    padding: 10px;
+    font-size: 1em;
     letter-spacing: 2px ;
     font-weight: 500;
-    border-radius: 10px;
+    border-radius: 20px;
     margin: 20px ;
     font-weight: bolder;
-
+    border: none;
+}
+.submit input:focus{
+    background: #af6606;
 }
 .buttom {
     position: relative;
@@ -214,8 +239,6 @@ h2{
     color: var(--fontColor);
     width: 150px ;
     height: 150px ; 
-    border-radius: 50% ;
-    border: 2px dashed var(--fontColor);
     transition: 0.2s;
 }
 
@@ -239,13 +262,13 @@ h2{
 .body{
     min-height: 100vh;
     width: 100% ;
-    background: black ;
+    background: radial-gradient(#09111f,#000000)    ;
     position: relative;
     overflow: hidden;
 }
 .bubbles{
     position: absolute ;
-    width: 100% ;
+    width: 500vh ;
     height: 100%;
     display: flex ;
     z-index: 10;  
@@ -253,28 +276,29 @@ h2{
 }
 .bubbles span {
     position: relative ;
-    width: 20px ;
-    height: 20px ;
-    background: turquoise ;
+    width: 30px ;
+    height: 30px ;
+    background: var(--turquesa) ;
     margin: 0 4px ;
     border-radius: 50% ;
-    box-shadow: 0 0 0 10px #4fc3dc44 ,
-    0 0 50px turquoise ,
-    0 0 10px turquoise;
-    animation: animate 15s linear infinite ;
+    box-shadow: 0 0 0 10px var(--cumplimentColor) ,
+    0 0 50px var(--turquesa) ,
+    0 0 10px var(--turquesa);
+    animation: animate 5s linear infinite ;
     animation-duration: calc(125s / var(--i));
+    animation: animate1 10s linar infinite;
 
 }
 .bubbles span:nth-child(even){
-    background: #ff2d7f ;
-    box-shadow: 0 0 0 10px #8f083c  ,
-    0 0 50px #ff2d7f  ,
-    0 0 10px #ff2d7f ;
+    background: var(--fontColor) ;
+    box-shadow: 0 0 0 10px #633f05  ,
+    0 0 50px var(--fontColor)   ,
+    0 0 10px var(--fontColor)  ;
 }
 
 @keyframes animate {
     0% {
-        transform: translateY(200vh) scale(1);
+        transform: translateY(200vh) scale(-1);
     }
     50%{
         transform: translateY(100vh) scale(0);
@@ -283,4 +307,110 @@ h2{
         transform: translateY(-10vh) scale(1);
     }
 }
+
+@media (max-width : 500px) {
+    .brand{
+        display: flex ;
+        width: 400px ;
+        justify-content: left;
+        align-items: center ;
+        top: 5px;
+    }
     
+    .img {
+        position: relative;
+        width: 50px ;
+        height: 50px ;
+        background-image: url(LogoMain.png);
+        background-size: cover ;
+        
+    
+    }
+    .pokeroi {
+        color: var(--otherColor);
+        text-transform: uppercase;
+        font-size: 1em;
+    }
+    .Bx1 .header {
+        width: 200px;
+        font-size: 1em;
+    }
+    .Bx1 h1 {
+        color: var(--otherColor);
+        text-align: center ;   
+    }
+    .Bx1 h1 span {
+        color: var(--turquesa);
+        text-shadow:1px 1px 1px black,
+        1px 1px  0.1em var(--turquesa)
+        
+    }
+    .Bx1 h1 .matic {
+        color: var(--fontColor);
+        text-shadow:1px 1px 1px black,
+        1px 1px  0.1em var(--fontColor)
+        
+    }
+    
+    .Container {
+        position: relative ;
+        border-radius: 20px;
+        width: 250px ;
+        min-height: 100px ;
+        background: var(--bgColor);
+        border: 1px solid var(--turquesa);
+        border-left: 1px solid  var(--turquesa);
+        background: #070d18;
+        box-shadow: 0 0 0 5px var(--cumplimentColor) ,
+        0 0 0px var(--cumplimentColor) ,
+        0 0 0px var(--cumplimentColor);
+        
+    }
+
+.selectContainer {
+    display: flex ;
+    align-items: center ;
+    justify-content: left ;
+}
+.inputBx {
+    position: relative ;
+    width: 100% ;
+    height: 100%;
+    
+}
+.inputBx input {
+    position: relative;
+    width: 100% ;
+    padding: 10px ;
+    border: 1px solid rgba(255,255,255,0.25);
+    background: #09111f;
+    border-radius: 5px ;
+    color: #fff ;
+    font-size: 0.8em ;
+    outline: none;
+}
+.inputBx span {
+    position: absolute ; 
+    left: 0 ;
+    padding: 10px ;
+    pointer-events: none ;
+    font-size: 0.8em ;
+    color: rgba(255,255,255,0.25) ;
+    transition: 0.5s ;
+}
+.submit input
+{
+    position: relative;
+    background: var(--fontColor);
+    color: #09111f ;
+    width: 150px ;
+    padding: 10px;
+    font-size: 1em;
+    letter-spacing: 2px ;
+    font-weight: 500;
+    border-radius: 20px;
+    margin: 20px ;
+    font-weight: bolder;
+    border: none;
+}
+}

@@ -7,8 +7,8 @@
     width: 100% ;
     margin: 0 auto ;
     user-select: none;
-    
-    
+    bottom: 100px;
+    animation: desplegar 1s ease  1.5s 1 forwards; 
 }
 .dropdown .dropdown-btn {
     padding: 15px 20px ;
@@ -21,6 +21,7 @@
     display: flex ;
     align-items: center ;
     justify-content: space-between ;
+    
     
 }
 .dropdown .dropdown-content {
@@ -51,9 +52,11 @@
 .icDown {
     color: rgba(138, 134, 134, 0.7) ;
     font-size: 1.5em;
+
 }
 .dropdown:hover .icDown {
     color: var(--fontColor);
+   
 }
 @media (max-width : 500px) {
     .dropdown .dropdown-btn {
@@ -68,6 +71,7 @@
         align-items: center ;
         justify-content: space-between ;
         
+        
     }
     .dropdown .dropdown-content .dropdown-item {
         padding: 10px ;
@@ -78,3 +82,16 @@
     }
 
 }
+
+
+/*-----Animaciones---*/
+
+@keyframes desplegar {
+    from {
+        bottom: 100px;
+    }
+    to {
+        bottom: 0px ;
+    }
+}
+

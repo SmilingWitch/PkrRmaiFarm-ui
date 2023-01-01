@@ -119,17 +119,16 @@ h2{
     border-radius: 20px;
     width: 400px ;
     min-height: 250px ;
-    border: 1px solid var(--turquesa);
-    border-left: 1px solid  var(--turquesa);
-    background: #070d18;
-    box-shadow: 0 0 0 5px var(--cumplimentColor) ,
-    0 0 0px var(--cumplimentColor) ,
-    0 0 0px var(--cumplimentColor);
-    top: 30px;
-    
+    border: 1px solid transparent;
+    border-left: 1px solid  transparent;
+    background: transparent;
+    box-shadow: 0 0 0 5px transparent ,
+    0 0 0px transparent ,
+    0 0 0px transparent;
+    overflow: hidden ;
+    top: 30px;  
 }
 
- 
 .selectContainer {
     display: flex ;
     align-items: center ;
@@ -137,21 +136,22 @@ h2{
 }
 .inputBx {
     position: relative ;
-    width: 250px ;
+    width: 0px ;
     height: 100%;
-    
 }
 .inputBx input {
     position: relative;
-    width: 100% ;
+    width: 0% ;
     padding: 10px ;
-    border: 1px solid rgba(255,255,255,0.25);
-    background: #09111f;
     border-radius: 5px ;
+    visibility: hidden;
+    border: 1px solid rgba(255,255,255,0.25);
     color: #fff ;
     font-size: 1em ;
     outline: none;
 }
+
+
 .inputBx span {
     position: absolute ; 
     left: 0 ;
@@ -159,8 +159,10 @@ h2{
     pointer-events: none ;
     font-size: 1em ;
     color: rgba(255,255,255,0.25) ;
+    visibility: hidden;
     transition: 0.5s ;
 }
+
 .inputBx input:valid ~ span,
 .inputBx input:focus ~ span {
     color: var(--turquesa);
@@ -185,10 +187,10 @@ h2{
     margin: 20px;
 }
 
-.submit input
-{
+.submit input {
     position: relative;
     background: var(--fontColor);
+    bottom: -100px;
     color: #09111f ;
     width: 150px ;
     padding: 10px;
@@ -284,9 +286,6 @@ h2{
     box-shadow: 0 0 0 10px var(--cumplimentColor) ,
     0 0 50px var(--turquesa) ,
     0 0 10px var(--turquesa);
-    animation: animate 5s linear infinite ;
-    animation-duration: calc(125s / var(--i));
-    animation: animate1 10s linar infinite;
 
 }
 .bubbles span:nth-child(even){
@@ -296,17 +295,7 @@ h2{
     0 0 10px var(--fontColor)  ;
 }
 
-@keyframes animate {
-    0% {
-        transform: translateY(200vh) scale(-1);
-    }
-    50%{
-        transform: translateY(100vh) scale(0);
-    }
-    100% {
-        transform: translateY(-10vh) scale(1);
-    }
-}
+
 
 @media (max-width : 500px) {
     .brand{
@@ -357,13 +346,12 @@ h2{
         border-radius: 20px;
         width: 250px ;
         min-height: 100px ;
-        background: var(--bgColor);
-        border: 1px solid var(--turquesa);
-        border-left: 1px solid  var(--turquesa);
-        background: #070d18;
-        box-shadow: 0 0 0 5px var(--cumplimentColor) ,
-        0 0 0px var(--cumplimentColor) ,
-        0 0 0px var(--cumplimentColor);
+        border: 1px solid transparent;
+        border-left: 1px solid  transparent;
+        background: transparent;
+        box-shadow: 0 0 0 5px transparent ,
+        0 0 0px transparent ,
+        0 0 0px transparent;
         
     }
 
@@ -375,9 +363,9 @@ h2{
 .inputBx {
     position: relative ;
     width: 100% ;
-    height: 100%;
-    
+    height: 100%;    
 }
+
 .inputBx input {
     position: relative;
     width: 100% ;
@@ -388,6 +376,7 @@ h2{
     color: #fff ;
     font-size: 0.8em ;
     outline: none;
+    
 }
 .inputBx span {
     position: absolute ; 
@@ -412,5 +401,109 @@ h2{
     margin: 20px ;
     font-weight: bolder;
     border: none;
+    
+
 }
+}
+
+/*--------------Animaciones-------------*/
+
+
+
+.Container {
+    animation: show1 1s ease  0.5s 1 forwards;
+}
+
+.inputBx {
+    animation: show5 1s ease  1.5s 1 forwards;
+}
+
+.inputBx input {
+    animation: show2 1s ease  1.5s 1 forwards;  
+}
+
+.submit input {
+    animation: show4 1s ease  1.5s 1 forwards;
+}
+
+.inputBx span {
+    animation: show3 1s ease-in-out  2s 1 forwards;
+}
+
+.bubbles span {
+    animation: animate 5s linear infinite ;
+    animation-duration: calc(125s / var(--i));
+}
+
+@keyframes show1 {
+    from {
+        border: 1px solid transparent;
+        border-left: 1px solid  transparent;
+        background: transparent;
+        box-shadow: 0 0 0 5px transparent ,
+        0 0 0px transparent ,
+        0 0 0px transparent;
+
+    }
+    to {
+        border: 1px solid var(--turquesa);
+        border-left: 1px solid  var(--turquesa);
+        background: #070d18;
+        box-shadow: 0 0 0 5px var(--cumplimentColor) ,
+        0 0 0px var(--cumplimentColor) ,
+        0 0 0px var(--cumplimentColor);
+    }
+    
+}
+
+@keyframes show2 {
+    from {
+        visibility: hidden;
+        width: 0% ;
+        background:#3c5683 ;
+    }
+    to {
+        visibility: visible;
+        width: 100% ;
+        background: #09111f;
+    }   
+}
+
+@keyframes show3 {
+    from {
+        visibility: hidden;
+    }
+    to {
+        visibility: visible;
+    }   
+}
+
+@keyframes show4 {
+    from {
+        bottom: -100px;
+    }
+    to {
+        bottom: 0px ;
+    }
+}
+
+@keyframes show5 {
+    from {
+        width: 0px ;
+    }
+    to {
+        width: 250px;
+    } 
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(200vh) scale(-1);
+    }
+    50%{
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
 }
